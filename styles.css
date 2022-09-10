@@ -1,0 +1,263 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+/* css reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom css */
+:root{
+    font-size: 16px;
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --primary-white: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 100vh;
+
+    background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+    background-size: contain contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: top, bottom ;
+    background-color: var(--primary-white);
+}
+
+main{
+    max-width: 320px;
+}
+
+.row-1{
+}
+    
+.introduction{
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.heading-primary{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--very-dark-magenta);
+}
+ 
+.text{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--very-dark-magenta);
+}
+ 
+.rating-group{
+    text-align: center;
+    margin: 2rem 0;
+}
+        
+.rating{
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    background-color: var(--light-grayish-magenta);
+}
+           
+.rating__stars{
+    margin-bottom: 0.5rem;
+}
+ 
+.rating__text{
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+}
+
+.row-2{
+
+}
+ 
+.review-group{
+    margin: 2rem 0;
+}
+ 
+.review{
+    padding: 2rem;
+    width: 16rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    background-color: var(--very-dark-magenta);
+
+}
+ 
+.review__user{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+ 
+.review__user__image{
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+ 
+.review__user__name{
+    font-weight: 700;
+    color: var(--primary-white);
+}
+ 
+.review__user__status{
+    font-weight: 400;
+    color: var(--soft-pink);
+
+
+}
+ 
+.review__text{
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--primary-white);
+
+}
+
+/* media queries */
+@media screen and (min-width: 768px) {
+    
+body{
+    padding: 3rem;
+    background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+    background-position: top left, bottom right;
+    background-attachment: fixed;
+}
+
+main{
+    max-width: none;
+}
+
+.row-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+    
+.introduction{
+    max-width: 24rem;
+    text-align: left;
+}
+
+.rating-group{
+    margin-right: 6rem;
+}
+        
+.rating{
+    min-width: 22rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rating:nth-of-type(2){
+    position: relative;
+    left: 3rem;
+}
+.rating:nth-of-type(3){
+    position: relative;
+    left: 6rem;
+}
+           
+.rating__stars{
+    margin-bottom: 0;
+}
+
+.row-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+}
+
+.review:nth-of-type(2){
+    position: relative;
+    top: 1rem;
+}
+
+.review:nth-of-type(3){
+    position: relative;
+    top: 2rem;
+}
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .row-2{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 10rem 10rem 10rem 10rem;
+        column-gap: 1rem;
+    }
+
+    .review:nth-of-type(1){
+        grid-column-start: 1;
+        grid-column-end:  3;
+        grid-row-start: 1;
+        grid-row-end:  2;
+    }
+    .review:nth-of-type(2){
+        grid-column-start: 3;
+        grid-column-end:  5;
+        grid-row-start: 1;
+        grid-row-end:  2;
+    }
+    .review:nth-of-type(3){
+        grid-column-start: 2;
+        grid-column-end:  4;
+        grid-row-start: 2;
+        grid-row-end:  3;
+    }
+    
+}

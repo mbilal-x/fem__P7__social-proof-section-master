@@ -1,0 +1,24 @@
+-> naming and markup structure:
+
+Body
+
+main
+row-1
+    introduction
+        Primary-heading
+        text
+    rating-group
+        rating
+            rating__stars
+            rating__text
+row-2
+    review-group
+        review
+            review__user
+                review__user__image
+                review__user__name
+                    review__user__status
+            review__text
+
+
+
