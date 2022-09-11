@@ -32,6 +32,10 @@ Users should be able to:
 - Live Site URL: [Live Site](https://mbilal-x.github.io/fem__P8__social-proof-section-master/)
 
 ## My process
+I when through some youTube code alongs to see how to better name in BEM naming convention. 
+This one took alot of time to buid, I thought that we can make a grid that has a different number of columns for each row, However I found that it wasn't possible. To use grid you need to make more than one rows sometime and assign a different column template to each. 
+The Same is the case with flexbox, you might have to add container rows to the elements you have to group together if you are using flex for the same layout.
+This is my third time coding this layout, 1st was a failed attempt at using grid without differnt rows. 2nd time I used flexbox but that too without changing the markup, which did not work out. 3rd time is this code, where I changed the markup added more rows and then defined seperate grid for each.
 
 ### Built with
 
@@ -42,12 +46,12 @@ Users should be able to:
 - Mobile-first workflow
 
 ### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- BEM
+- grid layout
+- flex layout 
 
 ### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+More practice with grid will help.
 
 ## Author
 
